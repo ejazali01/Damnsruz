@@ -1,6 +1,5 @@
 "use client"
 
-import { signOut } from 'next-auth/react'
 import React from 'react'
 
 const UserDashboard = () => {
@@ -9,7 +8,7 @@ const UserDashboard = () => {
     <div className='md:w-2/6 py-10 m-auto flex flex-col justify-center items-center border bg-orange-300 shadow-xl'>
      <h1 className='text-center py-4'> user data</h1>
      <div className='w-full lg:w-[300px] flex justify-center items-center p-2'>
-      <button className='text-xl p-3 font-semibold  bg-red-400 text-center ' type='button'  onClick={() => signOut()}>Logout</button>
+      Our Dashboard
      </div>
 
     </div>

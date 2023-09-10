@@ -1,5 +1,6 @@
 "use client";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const initialState = {
@@ -8,7 +9,7 @@ const initialState = {
   password: "",
 };
 const Signup = () => {
-
+  const router = useRouter();
   const [usersData, setUsersData] = useState(initialState);
   const { name, email, password } = usersData;
 
@@ -35,6 +36,7 @@ const Signup = () => {
 
       console.log('Signup Successful', response.data);
       setUsersData(initialState)
+      router.replace('/login')
       
     } catch (error) {
       console.error('Signup Failed', error);
