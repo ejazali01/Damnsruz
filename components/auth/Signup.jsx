@@ -21,7 +21,7 @@ const Signup = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
 
-    if(name || email || password){
+    if(!name || !email || !password){
       console.log("all fields are mandatory")
     }
     try {
