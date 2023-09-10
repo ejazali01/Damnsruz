@@ -1,0 +1,12 @@
+  {/* {
+                        categories?.map((items) => {
+                            
+                            return (
+                                <>
+                                <div key={items.id} className="mx-3 cursor-pointer">
+                                  <CategoryCard items={items} />
+                                </div>
+                                </>
+                            )
+                        })
+                    } */}
