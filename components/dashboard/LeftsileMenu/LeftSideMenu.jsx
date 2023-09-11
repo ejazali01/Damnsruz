@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const LeftSideMenu = () => {
   return (
-    <div>
-        <h1>Products</h1>
-        <h1>Cart</h1>
-
+    <div className="bg-orange-200 h-full cursor-pointer">
+      <ul>
+        <li className="p-3 hover:bg-gray-200">Products</li>
+        <li className="p-3 hover:bg-gray-200">Cart</li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default LeftSideMenu
+export default LeftSideMenu;

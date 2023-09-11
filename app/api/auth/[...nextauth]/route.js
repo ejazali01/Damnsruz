@@ -4,7 +4,9 @@ import nextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from 'bcrypt';
 
+dbConnect()
 export const authOptions = {
+
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -13,7 +15,6 @@ export const authOptions = {
       async authorize(credentials) {
         const {email, password} = credentials ;
        try{
-        await dbConnect()
         const user = await User.findOne({email});
 
         if(!user){

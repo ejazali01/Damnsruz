@@ -39,10 +39,10 @@ const Dropdown = ({user}) => {
        <AiOutlineUser onClick={toggleDropdown} className="p-2 text-4xl font-bold rounded-full hover:bg-gray-200 " />
 
       {isOpen && (
-        <div className="origin-top-right absolute left-0 mt-4 w-60 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right absolute sm:-right-12 lg:-left-16 xl:left-0 mt-2.5 w-60 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
           {/* Dropdown content goes here */}
-          <div className="py-2">
-          <div className='p-2 text-center'>
+          <div className="">
+          <div className='p-2 text-center bg-gray-100'>
             <h1 className=''>{user.name}</h1>
             <h2>{user.email}</h2>
           </div>

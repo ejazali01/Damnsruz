@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const initialState = {
   name: "",
@@ -23,10 +24,12 @@ const Signup = () => {
     e.preventDefault();
 
     if(!name || !email || !password){
-      console.log("all fields are mandatory")
+      toast.error("all fields are mandatory",{
+        position:"top-right"
+      })
     }
     try {
-      const response = await axios.post('/api/signup', usersData, {
+      await axios.post('/api/signup', usersData, {
         method:"POST",
         headers: {
           'Content-Type': 'application/json',
@@ -34,7 +37,9 @@ const Signup = () => {
         body: JSON.stringify(usersData)
       });
 
-      console.log('Signup Successful', response.data);
+      toast.success("account ceated sucessfully",{
+        position:"top-center"
+      });
       setUsersData(initialState)
       router.replace('/login')
       
