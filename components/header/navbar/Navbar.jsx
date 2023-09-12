@@ -150,7 +150,7 @@ const Navbar = () => {
     
     
     <nav className={`${
-      isSticky ? 'fixed top-0 left-0 sm:p-2 p-3 right-0 w-full z-50 bg-white shadow-lg' : 'sm:p-2 p-3'
+      isSticky ? 'fixed top-0 left-0  right-0 w-full z-50 bg-white shadow-lg' : ''
     } transition-all ease-in-out duration-300`}
     >
       <div className=" w-full lg:w-10/12 m-auto px-2">
@@ -221,11 +221,11 @@ const Navbar = () => {
           <div className="hidden sm:w-11/12 md:w-3/4  sm:flex justify-between items-center">
             <div className="space-x-6 ">
               <Link href="/new">
-                <span className={`py-2  hover:text-amber-500 `}>New</span>
+                <span className={`py-4 px-2 hover:text-amber-500 `}>New</span>
               </Link>
 
               <div
-                className="relative py-2 inline-block text-left"
+                className="relative py-4 px-2 inline-block text-left"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -240,51 +240,54 @@ const Navbar = () => {
                     <span>Collections</span>
                     <RiArrowDropDownLine className=" text-2xl font-light " />
                   </div>
-                  {isOpen && (
-                    <div className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                      {/* Dropdown content goes here */}
-                      <div className="py-2">
-                        <Link
-                          href="/new"
-                          onClick={closeDropdown}
-                          className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
-                        >
-                          New
-                        </Link>
-                        <Link
-                          href="/shop"
-                          onClick={closeDropdown}
-                          className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
-                        >
-                          Shop
-                        </Link>
-                        <Link
-                          href="collections"
-                          onClick={closeDropdown}
-                          className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
-                        >
-                          Collections
-                        </Link>
 
-                        <Link
-                          href="/about"
-                          onClick={closeDropdown}
-                          className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
-                        >
-                          Our Story
-                        </Link>
+                  <div className="origin-top-right absolute left-0 mt-4">
+                    {isOpen && (
+                      <div className="mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        {/* Dropdown content goes here */}
+                        <div className="py-2">
+                          <Link
+                            href="/new"
+                            onClick={closeDropdown}
+                            className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
+                          >
+                            New
+                          </Link>
+                          <Link
+                            href="/shop"
+                            onClick={closeDropdown}
+                            className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
+                          >
+                            Shop
+                          </Link>
+                          <Link
+                            href="collections"
+                            onClick={closeDropdown}
+                            className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
+                          >
+                            Collections
+                          </Link>
+
+                          <Link
+                            href="/about"
+                            onClick={closeDropdown}
+                            className="block px-4 py-2  text-sm text-gray-700 hover:bg-gray-200"
+                          >
+                            Our Story
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               </div>
 
               <Link href="/shop">
-                <span className={`py-2 hover:text-amber-500 `}>Shop</span>
+                <span className={`py-4  px-2 hover:text-amber-500 `}>Shop</span>
               </Link>
 
               <Link href="/about">
-                <span className={`py-2 hover:text-amber-500 `}>About</span>
+                <span className={`py-4  px-2 hover:text-amber-500 `}>About</span>
               </Link>
             </div>
 
